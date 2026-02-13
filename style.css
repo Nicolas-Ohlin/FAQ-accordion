@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+:root{
+    
+ --white: hsl(0, 100%, 100%);
+--purple-100: hsl(275, 100%, 97%);
+--purple-600: hsl(292, 16%, 49%);
+--purple-950: hsl(292, 42%, 14%);
+  --accent: hsl(281, 83%, 54%);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    min-height: 100vh;
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--purple-100);
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    font-family: "Work Sans", system-ui, sans-serif;
+    
+}
+main{
+    width: 400px;
+    height:400px ;
+    background-color: var(--white); 
+    border-radius: 30px;
+}
+
+.container{
+  width: min(600px, 100%);
+  background: var(--white);
+  border-radius: 30px;
+  box-shadow: 0 25px 60px rgba(0,0,0,.18);
+  padding: 34px;
+}
+
+.faqs{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.faqs h1{
+  font-size:3em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.questions{
+  display: grid;
+  gap: 0;
+}
+
+.questions hr{
+  border: none;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+.item{
+  padding: 18px 0;
+}
+
+.trigger{
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.trigger .q{
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--dark-purple);
+  line-height: 1.2;
+}
+
+.trigger:hover .q{
+    color:var(--accent);
+}
+
+
+.panel{
+  margin-top: 14px;
+}
+
+.answer{
+  color: var(--purple-600);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+
+
+@media (max-width: 600px){
+  body::before{
+    height: 240px;
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+  }
+
+  .container{
+    padding: 26px 22px;
+    border-radius: 14px;
+  }
+
+  .faqs h1{
+    font-size: 40px;
+  }
+
+  .trigger .q{
+    font-size: 16px;
+  }
+
+  .answer{
+    font-size: 14.5px;
+  }
+}
